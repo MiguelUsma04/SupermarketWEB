@@ -15,6 +15,9 @@ namespace SupermarketWEB.Models
         public int Stock { get; set; }
 
         public int CategoryId { get; set; } // Llave Foranea
-        public Category Category { get; set; } // Propiedad Navegación
+        public ICollection<Category>? Category { get; set; } = default!;
+
+
+        //public Category Category { get; set; } // Propiedad Navegación
     }
 }
