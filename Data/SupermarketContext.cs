@@ -13,7 +13,13 @@ namespace SupermarketWEB.Data
 
         public DbSet<Category> Categories { get; set; }
 
-        public DbSet<Pay_Mode> Pay_Mode { get; set; }
+        public DbSet<PayMode> PayModes { get; set; }
+
+        public DbSet<Invoice> Invoices { get; set; }
+
+        public DbSet<Detail> Details { get; set; }
+
+        public DbSet<Provider> Providers { get; set; }
 
 
     }
