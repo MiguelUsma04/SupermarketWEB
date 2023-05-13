@@ -16,10 +16,22 @@
             @Html.DisplayNameFor(model => model.Invoice.Number)
         </dt>
         <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Invoice.Number)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Invoice.ProviderId)
+        </dt>
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Invoice.ProviderId)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Invoice.Date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Invoice.Date)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Invoice.PayModeId)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Invoice.PayModeId)
