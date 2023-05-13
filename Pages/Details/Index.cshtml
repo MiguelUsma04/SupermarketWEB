@@ -1,0 +1,55 @@
+﻿@page
+@model SupermarketWEB.Pages.Details.IndexModel
+@{
+    ViewData["Title"] = "Index Categories";
+}
+<h1>Index Details</h1>
+
+<p>
+    <a asp-page="Create" class="btn btn-success">Create New</a>
+</p>
+<table class="table">
+
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Details[0].InvoiceId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Details[0].ProductId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Details[0].Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Details[0].Price)
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Details)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.InvoiceId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-warning">Edit</a>
+                    <a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+
+</table>
