@@ -41,7 +41,7 @@ namespace SupermarketWEB.Pages.Account
                 ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);
 
                 await HttpContext.SignInAsync("MyCookieAuth", claimsPrincipal);
-                RedirectToPage("/Index");
+                return RedirectToPage("../Index");
             }else
             {
                 Redirect("/Login");
